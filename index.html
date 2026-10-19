@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aryan · Software Engineer</title>
+  <meta name="description" content="Software engineer building full-stack web apps, machine-learning models and automation tools.">
+  <meta name="theme-color" content="#f6f6f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c0e11" media="(prefers-color-scheme: dark)">
+
+  <!-- Link previews (LinkedIn, WhatsApp, Slack...). Add an og:image once the site is live. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aryan · Software Engineer">
+  <meta property="og:description" content="Full-stack web apps, machine-learning models and automation tools.">
+  <!-- <meta property="og:image" content="https://your-site.com/preview.png"> -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a7c5c'/%3E%3Ctext x='16' y='22.5' font-family='monospace' font-size='17' font-weight='700' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Apply a saved light/dark choice before the page paints, so it doesn't flash.
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================== NAV ============================== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Aryan, back to top">aryan<span class="caret">_</span></a>
+      <nav aria-label="Main">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.07-17.07 1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="pill"><span class="dot" aria-hidden="true"></span>Open to new opportunities</p>
+          <h1>Hi, I'm Aryan.<br><span class="soft">I build web apps, ML models and tools that automate the boring parts.</span></h1>
+          <p class="lead">
+            Software engineer working across full-stack development, machine learning and developer tooling.
+            I like taking slow, repetitive work and turning it into something that just runs.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projects">See my work</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <!-- A short replay of vpnctl in action (animated by script.js) -->
+        <figure class="terminal" role="img" aria-label="Terminal showing vpnctl connecting two VPNs at once, listing them, and switching the system proxy">
+          <div class="term-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <p>~ zsh</p>
+          </div>
+          <div class="term-body" id="term" aria-hidden="true">
+            <div class="ln cmd"><span class="ps">$</span> <span class="tx">vpnctl up client-a prod</span></div>
+            <div class="ln" data-delay="300"><span class="ac">›</span> Connecting 'client-a'...</div>
+            <div class="ln" data-delay="1400"><span class="ac">›</span> 'client-a' is up (tunnel IP 10.212.4.17)</div>
+            <div class="ln" data-delay="250"><span class="ac">›</span> Connecting 'prod'...</div>
+            <div class="ln" data-delay="1100"><span class="ac">›</span> 'prod' is up (tunnel IP 10.8.0.6)</div>
+            <div class="ln cmd"><span class="ps">$</span> <span class="tx">vpnctl ls</span></div>
+            <div class="ln hd" data-delay="350">NAME      STATE  TUNNEL IP    USED BY</div>
+            <div class="ln">client-a  up     10.212.4.17  -</div>
+            <div class="ln">prod      up     10.8.0.6     2 databases</div>
+            <div class="ln cmd"><span class="ps">$</span> <span class="tx">vpnctl use client-a</span></div>
+            <div class="ln" data-delay="400"><span class="ac">›</span> System proxy now goes through 'client-a'</div>
+            <div class="ln cmd"><span class="ps">$</span> <span class="tx"></span><span class="cursor"></span></div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================== PROJECTS ============================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Selected work</p>
+          <h2>Projects</h2>
+          <p class="section-sub">From a full-stack web app to machine-learning models, plus a tool I use every day.</p>
+        </div>
+
+        <!-- Featured project -->
+        <article class="card feature reveal">
+          <div class="feature-copy">
+            <div class="card-top">
+              <span class="badge">Featured</span>
+              <span class="kind">DevOps · Command-line tool</span>
+            </div>
+            <h3>vpnctl: several VPNs, side by side</h3>
+            <p>
+              VPN clients like FortiClient connect you to one network at a time, so working across several meant
+              constantly disconnecting, logging back in and approving MFA prompts. <strong>vpnctl</strong> runs each
+              VPN in its own Docker container and exposes it on the Mac as a local SOCKS5 + HTTP proxy. Every session
+              stays connected, and you choose which one each app goes through.
+            </p>
+            <ul class="points">
+              <li>Route the whole Mac, a single terminal, a Chrome window, an SSH session or one command through any VPN</li>
+              <li>Companion Chrome extension (Manifest V3) switches your everyday browser between sessions in one click</li>
+              <li>Per-database port forwards, so tools like DBeaver can reach databases behind different VPNs at once</li>
+              <li>Self-healing: auto-reconnects with Duo MFA, sends keep-alives, and holds off sleep while a tunnel is up</li>
+              <li>Passwords live in the macOS Keychain and go straight into the container, never written to disk</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li><li>Docker</li><li>OpenVPN</li><li>openfortivpn</li><li>Bash</li><li>Chrome Extension</li><li>macOS</li>
+            </ul>
+            <div class="links">
+              <a href="https://github.com/Arya-jaswal/VPN" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10M7 17 17 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="feature-side">
+            <div class="diagram" role="img" aria-label="Diagram: your Mac connects to three VPN sessions at once. Each runs in its own Docker container with its own local proxy port.">
+              <div class="node node-root" aria-hidden="true">
+                <b>Your Mac</b>
+                <small>system proxy · shell · Chrome · ssh · DB clients</small>
+              </div>
+              <div class="branches" aria-hidden="true">
+                <div class="node"><b>client-a</b><small>fortinet<br>:1081</small></div>
+                <div class="node"><b>client-b</b><small>fortinet<br>:1082</small></div>
+                <div class="node"><b>prod</b><small>openvpn<br>:1083</small></div>
+              </div>
+              <p class="diagram-caption" aria-hidden="true">one Docker container per VPN, each with its own local proxy</p>
+            </div>
+            <ul class="stats">
+              <li><strong>1,700+</strong><span>lines of Python</span></li>
+              <li><strong>24</strong><span>CLI commands</span></li>
+              <li><strong>2</strong><span>VPN protocols</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="grid">
+          <!-- Restaurant -->
+          <article class="card project reveal">
+            <!-- Tip: replace this visual with a screenshot: <img src="images/restaurant.png" alt="Restaurant website home page"> -->
+            <div class="project-visual" aria-hidden="true">
+              <div class="icon-tile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="kind">Full-stack web app</span>
+              <h3><button class="project-open" type="button" aria-haspopup="dialog" data-dialog="detail-restaurant">Restaurant website</button></h3>
+              <p>
+                Customers scan the QR code on their table, order from their phone and pay online or at the desk,
+                while staff run every order from a dashboard that updates live.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Socket.IO</li>
+              </ul>
+              <div class="links">
+                <span class="more" aria-hidden="true">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stroke prediction -->
+          <article class="card project reveal">
+            <div class="project-visual" aria-hidden="true">
+              <div class="icon-tile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="kind">Machine learning · Healthcare</span>
+              <h3><button class="project-open" type="button" aria-haspopup="dialog" data-dialog="detail-stroke">Stroke risk prediction</button></h3>
+              <p>
+                Predicts whether a patient is at risk of a stroke from details like age, BMI, glucose level, blood
+                pressure and smoking habits, using a Random Forest model trained on real patient records.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Python</li><li>pandas</li><li>scikit-learn</li><li>Jupyter</li>
+              </ul>
+              <div class="links">
+                <span class="more" aria-hidden="true">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                <a href="https://github.com/Arya-jaswal/Stroke_Prediction_ML-model" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10M7 17 17 7"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- GST model -->
+          <article class="card project reveal">
+            <div class="project-visual" aria-hidden="true">
+              <div class="icon-tile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8M12 17.5v-11"/></svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="kind">Machine learning · Tax data</span>
+              <h3><button class="project-open" type="button" aria-haspopup="dialog" data-dialog="detail-gst">GST machine-learning model</button></h3>
+              <p>
+                A classification model built on GST (Goods and Services Tax) data for the GSTN hackathon. It fills in
+                missing values in the raw records, then trains an XGBoost model to make predictions.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Python</li><li>pandas</li><li>scikit-learn</li><li>XGBoost</li>
+              </ul>
+              <div class="links">
+                <span class="more" aria-hidden="true">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                <a href="https://github.com/Arya-jaswal/GST_ML_MODEL" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10M7 17 17 7"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ===== Project details: opened by clicking a card above (see script.js) ===== -->
+
+        <!-- Restaurant: details -->
+        <dialog class="project-dialog" id="detail-restaurant" aria-labelledby="detail-restaurant-title">
+          <button class="icon-btn dialog-close" type="button" data-close aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+          <div class="dialog-scroll">
+            <article class="feature">
+              <div class="feature-copy">
+                <div class="card-top">
+                  <span class="kind">Full-stack web app</span>
+                </div>
+                <h2 id="detail-restaurant-title">Restaurant website: order from the table</h2>
+                <p>
+                  A QR-code ordering system for a restaurant. Customers scan the code on their table, browse the menu
+                  and order from their phone without creating an account, then pay online with <strong>Razorpay</strong>
+                  or at the desk. Staff work every order from a private dashboard that updates the moment something changes.
+                </p>
+                <ul class="points">
+                  <li>Every order is tied to the table it came from, and customers follow its progress on a live status screen</li>
+                  <li>The server enforces the order workflow: steps can't be skipped or reversed, and a rejected order shows the customer why</li>
+                  <li>Secure online payments: prices are always calculated on the server, and each payment's signature is checked before an order is marked paid</li>
+                  <li>Admins manage the menu (with photo uploads), tables, QR codes and staff accounts behind JWT login, hashed passwords and rate limiting</li>
+                </ul>
+                <ul class="tags" aria-label="Technologies">
+                  <li>React</li><li>Vite</li><li>Tailwind CSS</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Socket.IO</li><li>Razorpay</li><li>JWT</li>
+                </ul>
+              </div>
+
+              <div class="feature-side">
+                <div class="diagram">
+                  <ol class="pipeline" aria-label="Life of an order">
+                    <li><b>Scan the table's QR code</b><small>opens the menu for that table</small></li>
+                    <li><b>Order from the phone</b><small>no login, cart saved on the device</small></li>
+                    <li><b>Pay</b><small>Razorpay online</small></li>
+                    <li><b>Reception confirms</b><small>sets an ETA, or rejects with a reason</small></li>
+                    <li><b>Food delivered</b><small>status updates live for the customer</small></li>                  </ol>
+                  <p class="diagram-caption">every step is timestamped and pushed live to both screens</p>
+                </div>
+                <ul class="stats">
+                  <li><strong>8,000+</strong><span>lines of JavaScript</span></li>
+                  <li><strong>3</strong><span>user roles</span></li>
+                  <li><strong>5</strong><span>order states</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </dialog>
+
+        <!-- Stroke prediction: details -->
+        <dialog class="project-dialog" id="detail-stroke" aria-labelledby="detail-stroke-title">
+          <button class="icon-btn dialog-close" type="button" data-close aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+          <div class="dialog-scroll">
+            <article class="feature">
+              <div class="feature-copy">
+                <div class="card-top">
+                  <span class="kind">Machine learning · Healthcare</span>
+                </div>
+                <h2 id="detail-stroke-title">Stroke risk prediction</h2>
+                <p>
+                  A model that predicts whether a patient is likely to have a stroke from routine details: age, gender,
+                  BMI, average glucose level, hypertension, heart disease, work type and smoking habits. It's trained with
+                  a <strong>Random Forest</strong> on 5,110 real patient records.
+                </p>
+                <ul class="points">
+                  <li>Explored the data with pandas and seaborn: class balance, category counts and IQR outliers in BMI and glucose</li>
+                  <li>Filled the 201 missing BMI values with the median instead of dropping them, since 40 of those patients had a stroke</li>
+                  <li>One-hot encoded categories like work type and smoking status, and standardised age, BMI and glucose</li>
+                  <li>Only 4.9% of patients had a stroke, so the minority class was oversampled to stop the model always guessing "no stroke"</li>
+                  <li>Trained a 100-tree Random Forest on an 80/20 split and tested it on hand-entered patient details</li>
+                </ul>
+                <ul class="tags" aria-label="Technologies">
+                  <li>Python</li><li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>imbalanced-learn</li><li>seaborn</li><li>Jupyter</li>
+                </ul>
+                <div class="links">
+                  <a href="https://github.com/Arya-jaswal/Stroke_Prediction_ML-model" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10M7 17 17 7"/></svg></a>
+                </div>
+              </div>
+
+              <div class="feature-side">
+                <div class="diagram">
+                  <ol class="pipeline" aria-label="Model pipeline">
+                    <li><b>5,110 patient records</b><small>10 health and lifestyle fields</small></li>
+                    <li><b>Clean</b><small>median-fill missing BMI</small></li>
+                    <li><b>Encode and scale</b><small>one-hot categories, standardise numbers</small></li>
+                    <li><b>Balance</b><small>oversample the stroke cases</small></li>
+                    <li><b>Random Forest</b><small>100 trees, 80/20 train/test split</small></li>
+                  </ol>
+                  <p class="diagram-caption">from raw CSV to a yes/no stroke-risk prediction</p>
+                </div>
+                <ul class="stats">
+                  <li><strong>5,110</strong><span>patient records</span></li>
+                  <li><strong>4.9%</strong><span>had a stroke</span></li>
+                  <li><strong>15</strong><span>model features</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </dialog>
+
+        <!-- GST model: details -->
+        <dialog class="project-dialog" id="detail-gst" aria-labelledby="detail-gst-title">
+          <button class="icon-btn dialog-close" type="button" data-close aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+          <div class="dialog-scroll">
+            <article class="feature">
+              <div class="feature-copy">
+                <div class="card-top">
+                  <span class="badge">Hackathon</span>
+                  <span class="kind">Machine learning · Tax data</span>
+                </div>
+                <h2 id="detail-gst-title">GST machine-learning model</h2>
+                <p>
+                  A binary classifier built by team GSTN_716 for the GSTN hackathon, trained on anonymised GST (Goods and
+                  Services Tax) records with separate training and test sets. Most of the work went into making messy,
+                  incomplete, imbalanced data usable, then checking that an <strong>XGBoost</strong> model held up on it.
+                </p>
+                <ul class="points">
+                  <li>Filled gaps column by column: the mean for simple columns, and scikit-learn's IterativeImputer to estimate the rest</li>
+                  <li>Used XGBoost's feature importances to find and drop columns that weren't helping the model</li>
+                  <li>Balanced the two classes with SMOTE, so the model couldn't score well by favouring the larger one</li>
+                  <li>Checked stability with 5-fold stratified cross-validation, charting F1 and ROC AUC for each fold</li>
+                  <li>Varied the number of trees from 1 to 30 and compared training and test scores to catch overfitting</li>
+                </ul>
+                <ul class="tags" aria-label="Technologies">
+                  <li>Python</li><li>pandas</li><li>scikit-learn</li><li>XGBoost</li><li>imbalanced-learn</li><li>Matplotlib</li><li>seaborn</li>
+                </ul>
+                <div class="links">
+                  <a href="https://github.com/Arya-jaswal/GST_ML_MODEL" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10M7 17 17 7"/></svg></a>
+                </div>
+              </div>
+
+              <div class="feature-side">
+                <div class="diagram">
+                  <ol class="pipeline" aria-label="Model pipeline">
+                    <li><b>Raw GST records</b><small>Unsupervised data, train and test sets</small></li>
+                    <li><b>Impute</b><small>mean and iterative imputation</small></li>
+                    <li><b>Balance</b><small>SMOTE oversampling</small></li>
+                    <li><b>Prune features</b><small>drop columns XGBoost ranks lowest</small></li>
+                    <li><b>XGBoost</b><small>5-fold stratified cross-validation</small></li>
+                  </ol>
+                  <p class="diagram-caption">clean, balance, then validate before trusting a score</p>
+                </div>
+                <ul class="stats">
+                  <li><strong>10M+</strong><span>Records</span></li>
+                  <li><strong>5</strong><span>validation folds</span></li>
+                  <li><strong>98.9%</strong><span>Accuracy</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </dialog>
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow">About</p>
+          <h2>A bit about me</h2>
+          <!-- TODO: add your education, current role and where you're based -->
+          <p>
+            I'm a software engineer who likes working across the whole stack: the pages people click on, the APIs and
+            databases behind them, and the data and models that make predictions from it.
+          </p>
+          <p>
+            My projects reflect that range: a full-stack restaurant website, two machine-learning models, and
+            vpnctl, a command-line tool I built to make juggling several VPNs painless. When something is slow or
+            repetitive, my first instinct is to automate it.
+          </p>
+        </div>
+
+        <!-- TODO: trim or extend these to match what you actually use -->
+        <div class="skills reveal">
+          <div class="card skill-group">
+            <h3>Languages</h3>
+            <ul class="tags"><li>Python</li><li>JavaScript</li><li>SQL</li><li>HTML &amp; CSS</li><li>Bash</li></ul>
+          </div>
+          <div class="card skill-group">
+            <h3>Machine learning</h3>
+            <ul class="tags"><li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>Matplotlib</li><li>Jupyter</li></ul>
+          </div>
+          <div class="card skill-group">
+            <h3>Web</h3>
+            <ul class="tags"><li>Full-stack development</li><li>REST APIs</li><li>Django</li><li>Chrome extensions</li></ul>
+          </div>
+          <div class="card skill-group">
+            <h3>Tools &amp; DevOps</h3>
+            <ul class="tags"><li>Docker</li><li>Git</li><li>Linux</li><li>macOS</li><li>AWS</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's build something.</h2>
+          <p>I'm open to new roles and interesting projects. The quickest way to reach me is email.</p>
+          <div class="hero-cta center">
+            <a class="btn btn-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=aj3684876@gmail.com" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Email me
+            </a>
+            <!-- TODO: drop resume.pdf into this folder -->
+            <a class="btn btn-ghost" href="resume.pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M16 13H8m8 4H8m2-8H8"/></svg>
+              Résumé
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Aryan. Built with plain HTML, CSS &amp; JavaScript.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>

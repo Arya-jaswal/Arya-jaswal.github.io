@@ -1,0 +1,11 @@
+# Allowlist: only the website files below are tracked and published.
+# Everything else in this folder (other projects, .env files, datasets) stays local.
+/*
+!/.gitignore
+!/.nojekyll
+!/index.html
+!/style.css
+!/script.js
+!/resume.pdf
+!/images/
+.DS_Store
